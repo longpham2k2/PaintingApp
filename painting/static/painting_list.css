@@ -113,6 +113,7 @@ ul{
 .featured-list {
     position: relative;
     height: 300px;
+    overflow: hidden;
 }
 
 .featured-list .img-list {
