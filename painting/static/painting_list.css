@@ -1,0 +1,190 @@
+ul{
+    list-style: none;
+}
+
+.row{
+    margin-left: 9px;
+    margin-right: -8px;
+    display: flex;
+    padding-top: 36px;
+}
+
+.col{
+    margin-right: 15px;
+    background-color: rgb(150, 221, 202);
+}
+
+.col-third{
+    width: 389px;
+    border-radius: 3px;
+    margin: 0 20px;
+}
+
+.background{
+    background-color: rgb(212, 225, 225);
+}
+
+.list{
+    background-color:  rgb(212, 225, 225);;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.picture-overview .over-img{
+    width: 100%;
+    max-height: 190px;
+}
+
+.picture-overview .over-img:hover{
+    opacity: 0.7;
+}
+
+.picture-overview .over-des{
+    color:rgb(18, 53, 54);
+    padding-left: 15px;
+    line-height: 1.5;
+}
+
+.over-des .des-line{
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.over-des h3{
+    font-size: 20px;
+}
+
+.over-des h4,p{
+    font-size: 16px;
+}
+
+.picture-overview .over-click{
+    background-color: rgb(18, 53, 54);
+    padding: 9px 20px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin: 5px 25px 15px;
+    text-decoration: none;
+}
+
+.picture-overview i{
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+
+/* Phần Content */
+.featured {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.featured-best {
+    width: 100%;
+    height: calc(100vw / 16 * 9 / 2);
+    padding: 2%;
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+}
+
+.featured-best .overlay {
+    width: 50%;
+    height: 100%;
+    margin-left: 50%;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.featured-best .overlay .title{
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(13, 83, 67);
+}
+
+.featured-best .overlay .description{
+    font-size: 24px;
+    font-style: italic;
+}
+.featured-list {
+    position: relative;
+    height: 300px;
+}
+
+.featured-list .img-list {
+    min-width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    width: fit-content;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+/* Next & previous buttons */
+.featured-list .prev, .featured-list .next {
+background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.featured-list .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.featured-list .prev:hover, .featured-list .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.featured-list .img-item{
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.featured-list .img-wrap {
+    height: 85%;
+}
+
+.featured-list .img-name {
+    display: flex;
+    height: 15%;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-item:hover .img-name {
+    color:red;
+}
+
+@media (orientation: landscape) {
+    .featured-list .img-wrap img{
+        height: 100%;
+        max-width: 100%;
+    }
+}
+@media (orientation: portrait) {
+    .featured-list .img-wrap img{
+        max-height: 100%;
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,68 @@
+.detail{
+    background-color:  rgb(212, 225, 225);
+    padding-left: 241px;
+    min-height: 560px;
+    padding-top: 31px;
+}
+
+.detail .detail-content{
+    display: inline-block;
+    width: 801px;
+    color: rgb(16 59 50);
+    padding-left: 18px;
+    padding-right: 2px;
+    padding-top: 10px;
+    min-height: 500px;
+    background-color: rgb(101, 168, 152);
+}
+
+.detail-content .detail-img{
+    text-align: center;
+    display: inline-block;
+    width: 784px;
+    padding-top: 10px;
+}
+
+.detail-content h3{
+    padding: 10px 0; 
+}
+
+.detail-content p{
+    text-align: justify;
+    padding: 10px 20px 10px 0px;
+    line-height: 1.4;
+}
+
+.detail .list-update {
+    float: right;
+    right: 30px;
+    background-color: rgb(101, 168, 152);
+    width: 390px;
+    margin-right: 22px;
+    margin-top: 4px;
+    color: rgb(16 59 50);
+}
+
+.detail .list-update .list-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+.detail .list-update .list-update-content {
+    padding-left: 10px;
+}
+
+.detail .list-update .list-update-content a {
+    line-height: 1.8;
+    text-decoration: none;
+    color: rgb(16 59 50);
+}
+
+.list-update .list-update-content a:hover {
+    opacity: 1;
+}
+
+
+

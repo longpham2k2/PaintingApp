@@ -1,0 +1,19 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block title %} 
+  Upload picture
+{% endblock %}
+
+{% block content %}
+  <div class="upload">
+    <div class="upload-a">
+      <h2>Upload a Painting</h2>
+      <form method="post" enctype="multipart/form-data" class="upload-content">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+      </form>
+  </div>
+  </div>
+{% endblock %}

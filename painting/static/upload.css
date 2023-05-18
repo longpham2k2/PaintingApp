@@ -1,0 +1,55 @@
+.upload{
+    background-color:  rgb(212, 225, 225);
+    height: 520px;
+    padding-left: 247px;
+    padding-top: 34px;
+}
+
+.upload .upload-a {
+    width: 798px;
+    height: 480px;
+    border: 2px solid #000;
+    display: inline-block;
+    line-height: 40px;
+    padding-left: 20px;
+    color: rgb(13, 83, 67);
+    padding-top: 10px;
+}
+
+.upload-a form .upload-content {
+    padding-left: 40px;
+}
+
+.upload-a h2{
+    text-align: center;
+}
+
+.upload-content #id_name{
+    margin-left:60px;
+    width: 545px;
+    height: 27px;
+}
+
+.upload-content #id_description{
+    width: 546px;
+    height: 290px;
+    margin-left: 23px;
+    margin-top: 10px;
+}
+
+.upload-content #id_image{
+    text-decoration: none;
+    margin-left: 58px;
+}
+
+.upload-content #id_image:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.upload-content  button{
+    padding: 4px 24px;
+    display: flex;
+    margin-left: 540px;
+}
+

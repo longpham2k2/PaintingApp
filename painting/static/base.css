@@ -1,0 +1,414 @@
+* {
+    font-family: Avenir-Nex, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a[href] {
+    text-decoration: none;
+    color: rgb(18, 53, 54);
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+.background {
+    background-color: rgb(212, 225, 225);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    gap: 10px;
+    color: rgb(13, 83, 67);
+}
+.menu {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    text-transform: uppercase;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.menu .all-topics, .all-topics-dropdown, .toggle-bars-btn, .mobile-menu{
+    display: none;
+}
+
+.menu li a {
+    padding: 0 15px;
+    font-size: 12px;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    transition: 0.3s linear all;
+}
+.menu li a:hover{
+    color: #b80b30;
+}
+
+.menu .menu-active{
+    color: #b80b30;
+    font-weight: 700;
+}
+.menu .popular{
+ 
+}
+.menu li:hover .menu-dropdown{
+ transform: translateY(0);
+ opacity: 1;
+}
+
+.menu-dropdown{
+    transform: translateY(-200%);
+    opacity: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    margin: 0 20px;
+    padding: 30px;
+    background-color: rgba(0,0,0,.9);
+    z-index: 999;
+    transition: all 0.6s linear;
+}
+
+.menu-dropdown .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.menu-dropdown .title h2{
+    color: #777777;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.menu-dropdown .title .view-all{
+    border: 0;
+    display: inline-block;
+    font-size: 14px;
+    background-color: #b80b30!important;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px 15px!important;
+    text-align: right;
+}
+.menu-dropdown .title .view-all:hover{
+    background-color: #ccc!important;
+}
+
+.dropdown-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.dropdown-list .item{
+    display: grid;
+    justify-content: start;
+}
+
+.dropdown-list .item img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.dropdown-list .item a{
+    font-family: cardoregular;
+    color: #fff!important;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.dropdown-list .item a:hover{
+    color: #b80b30!important;
+}
+.header .wrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-search {
+
+}
+
+.form-search input {
+    border: 0;
+    background: #f2f2f2 url(https://mymodernmet.com/assets/img/search-icon.png) 10px 50% no-repeat;
+    color: #000;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    width: 250px;
+    height: 35px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0 0 0 30px;
+}
+
+.header-member {
+    display: flex;
+    gap: 10px;
+}
+
+.header-member a {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #b80b30;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    align-items: start;
+    background-color: rgb(195, 214, 214);
+    padding: 40px 20px;
+}
+
+.footer .company .logo {
+    font-size: 30px;
+    display: inline-block;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.company .logo .logo-a {
+    text-decoration: none;
+    color: rgb(13, 83, 67);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.company-home .logo .fa-solid {
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+.company .company-home {
+    padding-bottom: 15px;
+}
+
+.company .company-home .company-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.company-home .company-list li a {
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0 5px;
+    color: rgb(18, 53, 54);
+}
+
+.company .company-year {
+    padding-left: 5px;
+    color: rgb(18, 53, 54);
+    font-style: italic;
+    font-size: 12px;
+}
+
+.footer .information .information-list {
+    line-height: 1.8;
+    color: rgb(18, 53, 54);
+    display: grid;
+    gap: 10px;
+}
+
+.footer .information .information-list:first-child {
+    line-height: 1.4;
+}
+
+.information .information-list li i {
+    padding-right: 10px;
+}
+
+.footer .introduce {
+    color: rgb(18, 53, 54);
+    display: grid;
+    gap: 10px;
+}
+
+.footer .introduce .intro-title {
+    font-size: 24px;
+}
+
+.footer .introduce .intro-content {
+    text-align: justify;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+.intro-list .intro-media {
+    display: flex;
+}
+
+.intro-media li a {
+    padding-right: 10px;
+    color: rgb(18, 53, 54);
+}
+@media (max-width:1335px) {
+    .header-nav{
+    
+    }
+    .header .header-nav .menu li{
+        display: none;
+    }
+    .header .header-nav .popular-item, .header .header-nav .all-topics{
+        display: flex  !important;
+    }
+    .menu .all-topics{
+        position: relative;
+    }
+    .menu .all-topics:hover .all-topics-dropdown{
+        display: block;
+    }
+    .all-topics-dropdown{
+        position: absolute;
+        left: 0;
+        top: 60px;
+        background-color: rgba(0,0,0,.9);
+        padding: 20px 0;
+        width: 300px;
+    }
+    .all-topics-dropdown h2{ 
+        padding-left: 15px;
+        color: #777777;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 16px;}
+    .header-nav .menu .all-topics-dropdown ul{
+        display: grid;
+        gap: 0;
+        grid-template-columns: 1fr;
+        padding: 20px 0;
+    }
+   .header-nav .menu .all-topics-dropdown li{
+        display: block;
+         height: 100%;
+    }
+     .header-nav .menu .all-topics-dropdown li a{
+        display: block;
+        width: 100% !important;
+        color: #fff;
+        width: 100%;
+        padding: 15px;
+    }
+    .header-nav .menu .all-topics-dropdown li a:hover{
+        background-color: #b80b30;
+    }
+}
+
+@media (max-width:992px) {
+  .header-nav .menu, .header-nav .wrapper{
+    display: none;
+  }
+  .header .header-nav .togglebars{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .header-nav  .togglebars .toggle-bars-btn{
+    display: block;
+    font-size: 24px;
+    color: rgb(13, 83, 67);
+  }
+  .mobile-menu{
+    transform: translateX(-100%);
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    min-height: 100vh;
+    width: 280px;
+    padding: 15px 0;
+    transition: all 0.4s ease-in-out;
+    z-index: 999;
+  }
+  .closeMobileMenu{
+    color: #b80b30;
+    font-size: 26px;
+  }
+
+  .show-mobile-menu{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .mobile-menu .logo{
+    padding-left: 15px;
+    padding-bottom: 10.5px;
+  }
+  .mobile-menu .menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  }
+  .mobile-menu .menu li{
+    height: 100%;
+  }
+  .mobile-menu .menu .form-search{
+    margin: 25px auto;
+  }
+
+  .mobile-menu .menu li a{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    transition: all 0.3s linear;
+  }
+  .mobile-menu .menu li a:hover{
+    color: #fff;
+    background-color: #b80b30;
+    padding: 15px 15px 15px 25px;
+  }
+  
+}
+@media (max-width: 500px) {
+    .footer {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}

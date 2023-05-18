@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'base.css' %}" />
+        <link rel="stylesheet" href="{% static 'painting_list.css' %}" />
+        <link rel="stylesheet" href="{% static 'paiting_detail.css' %}" />
+        <link rel="stylesheet" href="{% static 'painting_search.css' %}" />
+        <link rel="stylesheet" href="{% static 'upload.css' %}" />
+        <link rel="stylesheet" href="{% static 'fontawesome-free-6.2.1-web/css/all.min.css' %}" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header">
+            <nav class="header-nav">
+                <div class="logo">
+                    <a href="#"><i class="fa-solid fa-palette"></i>Painting</a>
+                </div>
+                <ul class="menu">
+                    <li class="popular-item">
+                        <a href="#" class="menu-active">popular <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                        <section class="menu-dropdown">
+                            <div class="title">
+                                <h2>popular posts</h2>
+                                <a href="#" class="view-all">view all</a>
+                            </div>
+                            <div class="dropdown-list">
+                                <article class="item">
+                                    <img
+                                        src="https://mymodernmet.com/wp/wp-content/uploads/2023/03/78rpm-archive-thumbnail-1.jpg"
+                                        alt=""
+                                    />
+                                    <a href="#"
+                                        >Listen To 385,000 Vintage 78 RPM Records For Free On 'The Internet Archive</a
+                                    >
+                                </article>
+                                <article class="item">
+                                    <img
+                                        src="https://mymodernmet.com/wp/wp-content/uploads/2023/04/wisteria-trees-spring-2023-feat-big.jpg"
+                                        alt=""
+                                    />
+                                    <a href="#"
+                                        >Dreamy Wisteria Trees Transform Japan Into a Blooming Wonderland Every
+                                        Spring</a
+                                    >
+                                </article>
+                                <article class="item">
+                                    <img
+                                        src="https://mymodernmet.com/wp/wp-content/uploads/2023/04/boris-eldagsen-ai-sony-world-photography-large.jpg"
+                                        alt=""
+                                    />
+                                    <a href="#"
+                                        >Photographer Admits His Award-Winning Photo Is AI-Generated and Rejects
+                                        Prize</a
+                                    >
+                                </article>
+                                <article class="item">
+                                    <img
+                                        src="https://mymodernmet.com/wp/wp-content/uploads/2023/04/Titanosaur-egg-fossil-thumbnail-1.jpg"
+                                        alt=""
+                                    />
+                                    <a href="#"
+                                        >What Researchers Long Thought Was Just an Agate Crystal Is Actually a Dinosaur
+                                        Egg Fossil</a
+                                    >
+                                </article>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="all-topics">
+                        <a href="#">all topics <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                        <section class="all-topics-dropdown">
+                            <h2>all topics</h2>
+                        <ul>
+                            <li><a href="#">art</a></li>
+                            <li><a href="#">design</a></li>
+                            <li><a href="#">photography</a></li>
+                            <li><a href="#">academy</a></li>
+                             <li><a href="#">store</a></li>
+                        </ul>
+                    </section>
+                    </li>
+                    <li><a href="#">art</a></li>
+                    <li><a href="#">design</a></li>
+                    <li><a href="#">photography</a></li>
+                    <li><a href="#">academy</a></li>
+                    <li><a href="#">store</a></li>
+                    <li><a href="#">more topic</a></li>
+                </ul>
+                <div class="wrapper">
+                    <form class="form-search">
+                        <input id="search" type="text" name="search" placeholder="Search" />
+                    </form>
+                    <div class="header-member">
+                        <a href="#">membership</a>
+                    </div>
+                </div>
+                <div class="togglebars"><button id="toggleBars" class="toggle-bars-btn" onclick="handleShowMobileMenu()"><i class="fa-solid fa-bars"></i><button></div>
+            </nav>
+
+            <section id="mobileMenu" class="mobile-menu ">
+                <div class="logo">
+                    <a href="#"><i class="fa-solid fa-palette"></i>Painting</a>
+                </div>
+                <ul class="menu">
+                    <li><a href="#">popular</a></li>
+                    <li><a href="#">art</a></li>
+                    <li><a href="#">design</a></li>
+                    <li><a href="#">photography</a></li>
+                    <li><a href="#">academy</a></li>
+                    <li><a href="#">store</a></li>
+                    <li><a href="#">more topics</a></li>
+                    <li><a href="#">membership</a></li>
+                    <li><form class="form-search">
+                        <input id="search" type="text" name="search" placeholder="Search" />
+                    </form></li>
+                </ul>
+                     
+            </section>
+        </header>
+
+        <!-- Phần Content -->
+
+        {% block content %} {% endblock %}
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="company">
+                <div class="logo">
+                    <a href="" class="logo-a"><i class="fa-solid fa-palette"></i>Painting</a>
+                </div>
+                <div class="company-home">
+                    <ul class="company-list">
+                        <li><a href="{% url 'list' %}">Home</a></li>
+                        |
+                        <li><a href="{%url 'upload' %}">Upload pictures</a></li>
+                        |
+                        <li><a href="">Contact</a></li>
+                        |
+                        <li><a href="">Surport</a></li>
+                        |
+                        <li><a href="">Social</a></li>
+                    </ul>
+                </div>
+                <p class="company-year">Company PITECH ©2013</p>
+            </div>
+
+            <div class="information">
+                <ul class="information-list">
+                    <li>
+                        <a href="#"
+                            ><i class="fa-solid fa-location-dot"></i>254 Hoang Quoc Viet, Co Nhue 1, Bac Tu Liem, Ha
+                            Noi</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-phone"></i>+ 256 879 123</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-envelope"></i>supportpaiting@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="introduce">
+                <p class="intro-title">About the company</p>
+                <p class="intro-content">
+                    With the criterion of giving customers absolute satisfaction, we are constantly innovating, updating
+                    the latest design and technology trends, helping customers have great experiences.
+                </p>
+                <div class="intro-list">
+                    <ul class="intro-media">
+                        <li>
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-github"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        {% load static %}
+
+        <script src="{% static 'index.js' %}"></script>
+    </body>
+</html>

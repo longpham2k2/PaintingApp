@@ -1,0 +1,23 @@
+{% extends "pages/base.html" %}
+{% load static %}  
+{% block title %} 
+    {{painting.name}}
+{% endblock %}
+{% block content %}
+
+<div class="detail">
+    <p>Kết quả tìm kiếm:</p>
+    {% for painting in paintings %}
+    <div class="row list-picture">
+        <div class="col col-third picture-overview">
+        <a href="{% url 'detail' pk=painting.id %}" ><img src="{{ painting.image.url }}" class="over-img" alt=""></a>
+        <div class="over-des">
+            <p> Name: {{ painting.name }}</p>
+            <p> Date upload: {{ painting.upload_date }}</p>
+        </div>
+        <a href="{% url 'detail' pk=painting.id %}" class="over-click">See picture details  <i class="fa-solid fa-arrow-right"></i></a>   
+    </div>
+</div>
+    {% endfor %}
+</div>
+{% endblock %}
