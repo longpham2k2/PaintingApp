@@ -1,12 +1,12 @@
 {% extends "pages/base.html" %}
 {% load static %}
 
-{% block title %} 
-  Upload picture
+{% block title %}
+Upload picture
 {% endblock %}
 
 {% block content %}
-  <div class="upload">
+<!-- <div class="upload">
     <div class="upload-a">
       <h2>Upload a Painting</h2>
       <form method="post" enctype="multipart/form-data" class="upload-content">
@@ -15,5 +15,28 @@
         <button type="submit">Save</button>
       </form>
   </div>
-  </div>
+  </div> -->
+  <form action method="post">
+    <h1><br> Upload a Painting</h1>
+    <div class="form-group">
+      <label for="title">Name</label>
+      <input type="text" name="title" id="title" class="form-controll" />
+    </div>
+    <div class="form-group">
+      <label for="caption">Description</label>
+      <input type="text" name="caption" id="caption" class="form-controll" />
+    </div>
+    <div class="form-group file-area">
+      <label for="images">Images</label>
+      <input type="file" name="images" id="images" required="required" multiple="multiple" />
+      <div class="file-dummy">
+        <div class="success">Great, your files are selected. Keep on.</div>
+          <div class="default">Please select some files</div>
+        </div>
+      </div>
+    <div class="form-group">
+      <button class="btn-submit-upload" type="submit">Submit</button>
+    </div>
+  </form>
+
 {% endblock %}

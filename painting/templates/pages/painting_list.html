@@ -2,10 +2,10 @@
 {% load static %}
 {% block title %}Home{% endblock %}
 {% block content %}
-    <div class="background slider">
-        <div class="featured">
-            <div class="featured-best"
-                 style="background-image: url('https://znews-photo.zingcdn.me/w860/Uploaded/uohusah/2021_12_07/trien_lam_2_zing.jpg')">
+<!-- <div class="background slider">
+        <div class="container">
+            <div class="row featured"
+                 style="background: url('https://znews-photo.zingcdn.me/w860/Uploaded/uohusah/2021_12_07/trien_lam_2_zing.jpg') no-repeat;">
                 <div class="overlay">
                     <div class="title">Painting Gallery</div>
                     <div class="description">Xem tranh vẽ đến từ mọi nơi trên thế giới</div>
@@ -24,25 +24,121 @@
                     </a>
                     {% endfor %}
                 </div>
-                <!-- Next and previous buttons -->
                 <a class="prev" onclick="scrollFeaturedList(-320, 0)">&#10094;</a>
                 <a class="next" onclick="scrollFeaturedList(320, 0)">&#10095;</a>
             </div>
         </div>
-    </div>
-    {% comment %} <div class="list">
-        <!-- row 1 -->
-        {% for painting in paintings %}
-        <div class="row ">
-            <div class="col col-third picture-overview">
-                <a href="{% url 'detail' pk=painting.id %}"><img src="{{ painting.image.url }}" class="over-img" alt=""></a>
-                <div class="over-des">
-                    <p>Name: {{ painting.name }}</p>
-                    <p>Date upload: {{ painting.upload_date }}</p>
+    </div> -->
+
+<main role="main" class="home">
+    <section class="home-featured-article">
+        <div class="banner">
+            <div class="overlay">
+                <div class="banner-contents">
+                    <h2><a
+                            href="https://mymodernmet.com/studio-be-new-orleans/">
+                            Painting Gallery</a>
+                    </h2>
+                    <a class="text"
+                        href="https://mymodernmet.com/studio-be-new-orleans/">
+                        <p>Xem tranh vẽ đến từ mọi nơi trên thế giới</p>
+                    </a>
                 </div>
-                <a href="{% url 'detail' pk=painting.id %}" class="over-click">See picture details  <i class="fa-solid fa-arrow-right"></i></a>   
             </div>
         </div>
-        {% endfor %}
-    </div> {% endcomment %}
-{% endblock %}
+    </section>
+    <section class="featured-articles">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="recent-articles-title home-title">
+                    My Modern Met <span class="subtext">
+                        <a href="#"> The Big City That Celebrates
+                            Creativity</a></span>
+                </h3>
+            </div>
+        </div>
+        <div class="featured-list">
+            <div class="featured-col">
+                <div class="featured-image">
+                    <a
+                        href="https://mymodernmet.com/my-modern-met-store-creative-products/"><img
+                            src="https://mymodernmet.com/wp/wp-content/uploads/2020/10/creative-products-my-modern-met-store-update-feat-sm.jpg"></a>
+                </div>
+                <div class="home-category"><a href="/category/store">Store</a></div>
+                <a
+                    href="https://mymodernmet.com/my-modern-met-store-creative-products/">Enjoy
+                    the Best Creative Products When You Shop at My Modern Met
+                    Store</a>
+            </div>
+            <div class="featured-col">
+                <div class="featured-image">
+                    <a
+                        href="https://mymodernmet.com/become-a-my-modern-met-member/"><img
+                            src="https://mymodernmet.com/wp/wp-content/uploads/2022/04/my-modern-met-membership-feat-sm-2022.jpg"></a>
+                </div>
+                <div class="home-category"><a href="/category/membership">Membership</a></div>
+                <a href="https://mymodernmet.com/become-a-my-modern-met-member/">Support
+                    Creativity When You Become a Member of My Modern Met</a>
+            </div>
+            <div class="featured-col">
+                <div class="featured-image">
+                    <a
+                        href="https://mymodernmet.com/my-modern-met-academy-e-learning/"><img
+                            src="https://mymodernmet.com/wp/wp-content/uploads/2022/02/academy-text-feat-sm.jpg"></a>
+                </div>
+                <div class="home-category"><a href="/category/academy">Academy</a></div>
+                <a
+                    href="https://mymodernmet.com/my-modern-met-academy-e-learning/">Unleash
+                    Your Creativity When You Enroll in My Modern Met Academy</a>
+            </div>
+            <div class="featured-col">
+                <div class="featured-image">
+                    <a href="https://mymodernmet.com/name-that-sculpture-quiz/"><img
+                            src="https://mymodernmet.com/wp/wp-content/uploads/2023/05/sculpture-quiz-square.jpg"></a>
+                </div>
+                <div class="home-category"><a href="/category/quiz">Quiz</a></div>
+                <a href="https://mymodernmet.com/name-that-sculpture-quiz/">Name
+                    That Sculpture! Test Your Art Knowledge [Quiz]</a>
+            </div>
+            <div class="featured-col">
+                <div class="featured-image">
+                    <a href="https://mymodernmet.com/name-that-sculpture-quiz/"><img
+                            src="https://mymodernmet.com/wp/wp-content/uploads/2023/05/sculpture-quiz-square.jpg"></a>
+                </div>
+                <div class="home-category"><a href="/category/quiz">Quiz</a></div>
+                <a href="https://mymodernmet.com/name-that-sculpture-quiz/">Name
+                    That Sculpture! Test Your Art Knowledge [Quiz]</a>
+            </div>
+            <div class="featured-col">
+                <div class="featured-image">
+                    <a href="https://mymodernmet.com/name-that-sculpture-quiz/"><img
+                            src="https://mymodernmet.com/wp/wp-content/uploads/2023/05/sculpture-quiz-square.jpg"></a>
+                </div>
+                <div class="home-category"><a href="/category/quiz">Quiz</a></div>
+                <a href="https://mymodernmet.com/name-that-sculpture-quiz/">Name
+                    That Sculpture! Test Your Art Knowledge [Quiz]</a>
+            </div>
+        </div>
+        <div class="show-more">
+            <button>Show more</button>
+        </div>
+    </section>
+</main>
+
+<!-- {% comment %} <div class="list">
+    {% for painting in paintings %}
+    <div class="row ">
+        <div class="col col-third picture-overview">
+            <a href="{% url 'detail' pk=painting.id %}"><img
+                    src="{{ painting.image.url }}" class="over-img" alt></a>
+            <div class="over-des">
+                <p>Name: {{ painting.name }}</p>
+                <p>Date upload: {{ painting.upload_date }}</p>
+            </div>
+            <a href="{% url 'detail' pk=painting.id %}" class="over-click">See
+                picture details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    {% endfor %}
+</div> {% endcomment %}
+{% endblock %} -->

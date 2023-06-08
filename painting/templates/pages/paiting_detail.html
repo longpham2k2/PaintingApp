@@ -21,21 +21,26 @@
                     <button type="submit" style="font-size: larger;">🤍</button>
                 </form>
                 {% endif %}
-                <p style="font-size: larger;"> {{ likeCount }} </p>
+                &nbsp;<p style="font-size: larger;"> {{ likeCount }} </p>
             </div>
             <p> {{ painting.upload_date }}</p>
         </div>
-        <h3> {{ painting.name }}</h3>
-        <p> {{ painting.description }}</p>
     </div>
-    <div class="list-update">
-        <p class="list-title">Painting just updated</p>
-        <div class="list-update-content">
-        {% for painting in paintings %}
-        <div class="">
-            <a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a>
+    <div class="right">
+        <div class="description">
+            <h2> {{ painting.name }}</h2>
+            <p> {{ painting.description }}</p>
         </div>
-        {% endfor %}
+        <br>
+        <div class="list-update">
+            <p class="list-title">Painting just updated</p>
+            <div class="list-update-content">
+            {% for painting in paintings %}
+            <div class="">
+                <a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a>
+            </div>
+            {% endfor %}
+            </div>
         </div>
     </div>
 </div>

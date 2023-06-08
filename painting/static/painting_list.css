@@ -1,191 +1,225 @@
-ul{
-    list-style: none;
+body {
+    background: #fff;
+    color: #000;
+    line-height: 23px;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: Avenir-Next;
 }
 
-.row{
-    margin-left: 9px;
-    margin-right: -8px;
-    display: flex;
-    padding-top: 36px;
+a {
+    color: #337ab7;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.col{
-    margin-right: 15px;
-    background-color: rgb(150, 221, 202);
-}
-
-.col-third{
-    width: 389px;
-    border-radius: 3px;
-    margin: 0 20px;
-}
-
-.background{
-    background-color: rgb(212, 225, 225);
-}
-
-.list{
-    background-color:  rgb(212, 225, 225);;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.picture-overview .over-img{
-    width: 100%;
-    max-height: 190px;
-}
-
-.picture-overview .over-img:hover{
-    opacity: 0.7;
-}
-
-.picture-overview .over-des{
-    color:rgb(18, 53, 54);
-    padding-left: 15px;
-    line-height: 1.5;
-}
-
-.over-des .des-line{
-    font-size: 12px;
-    text-decoration: line-through;
-}
-
-.over-des h3{
-    font-size: 20px;
-}
-
-.over-des h4,p{
-    font-size: 16px;
-}
-
-.picture-overview .over-click{
-    background-color: rgb(18, 53, 54);
-    padding: 9px 20px;
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    margin: 5px 25px 15px;
+h2 a {
+    color: #000;
     text-decoration: none;
 }
 
-.picture-overview i{
-    font-size: 20px;
-    padding-left: 10px;
+a, a:hover {
+    color: #b80b30;
 }
 
+.home {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
-/* Phần Content */
-.featured {
-    padding: 40px 20px;
+.banner {
+    background-image: url('https://mymodernmet.com/wp/wp-content/uploads/2023/05/Studio-BE.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 707px;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.7);
+    max-width: 630px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    bottom: 20px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+
+.banner-contents {
+    line-height: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.home .home-featured-article .banner .overlay .banner-contents h2 {
+    font-size: 70px;
+    line-height: 60px;
+    font-family: foglihtenregular;
+}
+
+.home .home-featured-article .banner .overlay .text p {
+    color: #000;
+    text-decoration: none;
+}
+
+.recent-articles-title.home-title {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.recent-articles-title {
+    margin-bottom: 20px;
+    margin-top: 0;
+    letter-spacing: .9px;
+}
+
+.subtext {
+    font-family: Avenir-Nex, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0;
+    color: #989898;
+    margin: 0;
+    padding-top: 15px;
+    text-transform: none;
+}
+
+.featured-articles a {
+    text-decoration: none;
+    color: #3b3b3b;
+    font-size: 18px;
+    font-family: cardobold;
+}
+
+.featured-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
-.featured-best {
-    width: 100%;
-    height: calc(100vw / 16 * 9 / 2);
-    padding: 2%;
-    background-repeat: no-repeat; background-size: cover; background-position: center;
+.featured-col {
+    width: 310px;
+    transition: transform 0.3s ease;
 }
 
-.featured-best .overlay {
-    width: 50%;
-    height: 100%;
-    margin-left: 50%;
-    background-color: rgba(255, 255, 255, 0.75);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 5%;
+.featured-col:hover {
+    opacity: 0.8;
+    transform: scale(0.9);
 }
 
-.featured-best .overlay .title{
-    font-size: 32px;
-    font-weight: bold;
-    color: rgb(13, 83, 67);
+.home-category {
+    font-family: Avenir-Next;
+    font-size: 13px;
+    color: #b80b30;
 }
 
-.featured-best .overlay .description{
-    font-size: 24px;
-    font-style: italic;
-}
-.featured-list {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
+.home-category a {
+    font-family: Avenir-Next;
+    font-size: 13px;
+    line-height: 15px;
+    color: #b80b30;
 }
 
-.featured-list .img-list {
-    min-width: 100%;
-    height: 100%;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    width: fit-content;
-    white-space: nowrap;
-    scroll-behavior: smooth;
+.home-category, .home-category a {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-/* Next & previous buttons */
-.featured-list .prev, .featured-list .next {
-background-color: rgba(0,0,0,0.4);
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.show-more {
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Position the "next button" to the right */
-.featured-list .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+button {
+    font-size: 16px;
+    text-align: center;
+    background-color: red;
+    text-align: center;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 2px solid red;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.featured-list .prev:hover, .featured-list .next:hover {
-  background-color: rgba(0,0,0,0.8);
+button:hover {
+    background-color: #fff;
+    color: black;
 }
 
-.featured-list .img-item{
-    height: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    padding: 0 10px;
-}
-
-.featured-list .img-wrap {
-    height: 85%;
-}
-
-.featured-list .img-name {
-    display: flex;
-    height: 15%;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-item:hover .img-name {
-    color:red;
-}
-
-@media (orientation: landscape) {
-    .featured-list .img-wrap img{
-        height: 100%;
-        max-width: 100%;
-    }
-}
-@media (orientation: portrait) {
-    .featured-list .img-wrap img{
-        max-height: 100%;
-        width: 100%;
+@media (max-width: 2560px) {
+    .home {
+        max-width: 2559px;
     }
 }
 
+@media (max-width: 1200px) {
+    .banner {
+        min-height: 707px;
+    }
+    .overlay {
+        max-width: 560px;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner {
+        min-height: 607px;
+    }
+    .overlay {
+        max-width: 460px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        min-height: 407px;
+    }
+    .overlay {
+        max-width: 360px;
+    }
+    .banner-contents {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 598px) {
+    .banner {
+        min-height: 307px;
+    }
+    .overlay {
+        max-width: 260px;
+    }
+    .banner-contents {
+        line-height: 20px;
+    }
+    .home .home-featured-article .banner .overlay .banner-contents h2 {
+        font-size: 50px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .banner {
+        min-height: 207px;
+    }
+    .overlay {
+        max-width: 160px;
+    }
+    .banner-contents {
+        line-height: 10px;
+    }
+    .home .home-featured-article .banner .overlay .banner-contents h2 {
+        font-size: 30px;
+        line-height: 25px;
+    }
+    .home .home-featured-article .banner .overlay .text p {
+        font-size: 10px;
+    }
+}

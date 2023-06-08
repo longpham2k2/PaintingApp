@@ -240,6 +240,7 @@ img {
     }
     .toggle-bars-btn {
         font-size: 24px;
+        color: #000000;
     }
     .header__menu {
         transform: translateX(-100%);
@@ -289,6 +290,7 @@ img {
     .header-nav .logo a {
     font-size: 24px;
 }
+
 }
 @media (max-width: 500px) {
     .footer {

@@ -1,13 +1,15 @@
 .detail{
     background-color:  rgb(212, 225, 225);
-    padding-left: 241px;
+    padding-left: 60px;
     min-height: 560px;
     padding-top: 31px;
+    display: flex;
+    gap: 20px;
 }
 
 .detail .detail-content{
     display: inline-block;
-    width: 801px;
+    width: 65%;
     color: rgb(16 59 50);
     padding-left: 18px;
     padding-right: 2px;
@@ -19,11 +21,16 @@
 .detail-content .detail-img{
     text-align: center;
     display: inline-block;
-    width: 784px;
+    width: 764px;
     padding-top: 10px;
 }
 
-.detail-content h3{
+.right {
+    width: 30%;
+    margin-right: 30px;
+}
+
+.detail-content h2{
     padding: 10px 0; 
 }
 
@@ -35,11 +42,8 @@
 
 .detail .list-update {
     float: right;
-    right: 30px;
+    width: 100%;
     background-color: rgb(101, 168, 152);
-    width: 390px;
-    margin-right: 22px;
-    margin-top: 4px;
     color: rgb(16 59 50);
 }
 
@@ -64,5 +68,10 @@
     opacity: 1;
 }
 
-
+.description {
+    background-color: rgb(101, 168, 152);
+    color: rgb(16 59 50);
+    padding: 10px;
+    margin-top: 5px;
+}
 
