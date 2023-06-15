@@ -35,7 +35,8 @@ img {
 }
 
 .togglebars,
-.logo-mobile {
+.logo-mobile,
+.close-menubar {
     display: none;
 }
 
@@ -242,6 +243,15 @@ img {
         font-size: 24px;
         color: #000000;
     }
+    .close-menubar{
+        display: block;
+        font-size: 30px;
+        color: red;
+        position: absolute;
+        top: 4%;
+        right: 5%;
+        z-index: 1;
+    }
     .header__menu {
         transform: translateX(-100%);
         display: flex;
@@ -292,6 +302,15 @@ img {
 }
 
 }
+@media screen and (max-width: 576px) {
+    .form-search input{
+        width: 180px;
+    }
+   .header-nav .logo a {
+    display: none;
+   }
+}
+    
 @media (max-width: 500px) {
     .footer {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

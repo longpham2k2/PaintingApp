@@ -6,17 +6,7 @@ Upload picture
 {% endblock %}
 
 {% block content %}
-<!-- <div class="upload">
-    <div class="upload-a">
-      <h2>Upload a Painting</h2>
-      <form method="post" enctype="multipart/form-data" class="upload-content">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save</button>
-      </form>
-  </div>
-  </div> -->
-  <form action method="post">
+  <form class="form-upload" action method="post">
     <h1><br> Upload a Painting</h1>
     <div class="form-group">
       <label for="title">Name</label>

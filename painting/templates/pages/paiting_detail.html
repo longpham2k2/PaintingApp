@@ -13,12 +13,12 @@
                 {% if isLiked %}
                 <form action="{% url 'detailUnlike' pk=painting.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" style="font-size: large;">❤️</button>
+                    <button type="submit" style="font-size: large;" class="btn-like">❤️</button>
                 </form>
                 {% else %}
                 <form action="{% url 'detailLike' pk=painting.id %}" method="post">
                     {% csrf_token %}
-                    <button type="submit" style="font-size: larger;">🤍</button>
+                    <button type="submit" style="font-size: larger;" class="btn-like">🤍</button>
                 </form>
                 {% endif %}
                 &nbsp;<p style="font-size: larger;"> {{ likeCount }} </p>
@@ -33,14 +33,15 @@
         </div>
         <br>
         <div class="list-update">
-            <p class="list-title">Painting just updated</p>
-            <div class="list-update-content">
+            <h3 class="list-title">Painting just updated</h3>
+            <ul class="list-update-content">
             {% for painting in paintings %}
-            <div class="">
+            <li>
+                <img src="{{painting.image.url}}" alt="{{ painting.image.name }}"/>
                 <a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a>
-            </div>
+            </li>
             {% endfor %}
-            </div>
+            </ul>
         </div>
     </div>
 </div>

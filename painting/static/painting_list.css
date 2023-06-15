@@ -4,7 +4,6 @@ body {
     line-height: 23px;
     font-size: 18px;
     line-height: 27px;
-    font-family: Avenir-Next;
 }
 
 a {
@@ -104,27 +103,33 @@ a, a:hover {
 .featured-col {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: start;
     width: 310px;
     transition: transform 0.3s ease;
 }
-
-.featured-col:hover {
-    opacity: 0.8;
-    transform: scale(0.9);
+.featured-image a{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.featured-image img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+.featured-image img:hover{
+    transform: scale(0.98);
 }
 
 .home-category {
-    font-family: Avenir-Next;
     font-size: 13px;
     color: #b80b30;
 }
 
 .home-category a {
-    font-family: Avenir-Next;
     font-size: 16px;
     line-height: 15px;
-    color: #b80b30;
 }
 
 .home-category, .home-category a {

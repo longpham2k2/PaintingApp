@@ -1,77 +1,58 @@
 .detail{
-    background-color:  rgb(212, 225, 225);
-    padding-left: 60px;
-    min-height: 560px;
+    padding: 0 4vw;
     padding-top: 31px;
-    display: flex;
-    gap: 20px;
-}
-
-.detail .detail-content{
-    display: inline-block;
-    width: 65%;
-    color: rgb(16 59 50);
-    padding-left: 18px;
-    padding-right: 2px;
-    padding-top: 10px;
-    min-height: 500px;
-    background-color: rgb(101, 168, 152);
+    color: #000000;
 }
 
 .detail-content .detail-img{
-    text-align: center;
-    display: inline-block;
-    width: 764px;
-    padding-top: 10px;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
-.right {
-    width: 30%;
-    margin-right: 30px;
-}
-
-.detail-content h2{
-    padding: 10px 0; 
-}
 
 .detail-content p{
     text-align: justify;
-    padding: 10px 20px 10px 0px;
     line-height: 1.4;
 }
 
-.detail .list-update {
-    float: right;
-    width: 100%;
-    background-color: rgb(101, 168, 152);
-    color: rgb(16 59 50);
-}
 
 .detail .list-update .list-title {
     text-align: center;
     font-size: 26px;
     font-weight: 600;
-    padding-top: 5px;
 }
 
 .detail .list-update .list-update-content {
-    padding-left: 10px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 }
-
-.detail .list-update .list-update-content a {
-    line-height: 1.8;
-    text-decoration: none;
-    color: rgb(16 59 50);
+.list-update-content li{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
 }
-
-.list-update .list-update-content a:hover {
-    opacity: 1;
+.list-update-content li img{
+   width: 300px;
+   height: 300px;
+  object-fit: cover;
+}
+.btn-like{
+    padding: 0;
 }
 
 .description {
-    background-color: rgb(101, 168, 152);
-    color: rgb(16 59 50);
     padding: 10px;
     margin-top: 5px;
 }
+.description h2{
+    font-size: 30px;
+   line-height: 40px;
+}
+
 

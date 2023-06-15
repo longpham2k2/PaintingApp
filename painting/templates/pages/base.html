@@ -26,24 +26,25 @@
                     </div>
                     <a href="#"><i class="fa-solid fa-palette"></i> Painting</a>
                 </div>
-                <label for="inputToggle" class="header__menu">
+                <div class="header__menu">
+                    <label for="inputToggle" class="close-menubar"><i class="fa-solid fa-xmark"></i></label>
                     <div class="logo-mobile">
                         <a href="#"><i class="fa-solid fa-palette"></i>Painting</a>
                     </div>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Upload pictures</a></li>
+                        <li><a href="{% url 'list' %}">Home</a></li>
+                        <li><a href="{% url 'upload' %}">Upload pictures</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Suport</a></li>
                         <li><a href="#">Social</a></li>
                     </ul>
-                </label>
+                </div>
                 <div class="wrapper">
                     <form class="form-search">
                         <input id="search" type="text" name="search" placeholder="Search" />
                     </form>
-                    <a href="#" class="btn">Login</a>
-                    <a href="#" class="btn">Log out</a>
+                    <a href="/admin/login" class="btn">Login</a>
+                    {% comment %} <a href="#" class="btn">Log out</a> {% endcomment %}
                 </div>
             </nav>
         </header>

@@ -2,33 +2,6 @@
 {% load static %} 
 {% block title%}Home{%endblock %} 
 {% block content %}
-<!-- <div class="background slider">
-        <div class="container">
-            <div class="row featured"
-                 style="background: url('https://znews-photo.zingcdn.me/w860/Uploaded/uohusah/2021_12_07/trien_lam_2_zing.jpg') no-repeat;">
-                <div class="overlay">
-                    <div class="title">Painting Gallery</div>
-                    <div class="description">Xem tranh vẽ đến từ mọi nơi trên thế giới</div>
-                </div>
-            </div>
-            <div class="featured-list">
-                <div class="img-list">
-                    {% for painting in paintings %}
-                    <a class="img-item" href="{% url 'detail' pk=painting.id %}">
-                        <div class="img-wrap">
-                            <img src="{{ painting.image.url }}" alt="" />
-                        </div>
-                        <div class="img-name">
-                            {{ painting.name }}
-                        </div>
-                    </a>
-                    {% endfor %}
-                </div>
-                <a class="prev" onclick="scrollFeaturedList(-320, 0)">&#10094;</a>
-                <a class="next" onclick="scrollFeaturedList(320, 0)">&#10095;</a>
-            </div>
-        </div>
-    </div> -->
 
 <main role="main" class="home">
   <section class="home-featured-article">
@@ -61,15 +34,13 @@
     <div class="featured-list">
       {% for painting in paintings %}
       <div class="featured-col">
-        <div class="featured-image">
-          <a href="{% url 'detail' pk=painting.id %}"
-            ><img src="{{ painting.image.url }}"
-          /></a>
-        </div>
+        <a href="{% url 'detail' pk=painting.id %}" class="featured-image">
+          <img src="{{ painting.image.url }}"/>
         <div class="home-category">
-          <a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a>
+         <p>{{ painting.name }}</p>
         </div>
-        <a href="{% url 'detail' pk=painting.id %}">{{ painting.upload_date }}</a>
+       <time>{{ painting.upload_date }}</time>
+      </a>
       </div>
       {% endfor %}
     </div>
