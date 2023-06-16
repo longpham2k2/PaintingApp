@@ -1,9 +1,11 @@
+import os
 from django.shortcuts import render, get_object_or_404,redirect
 from .models import Painting
 from .models import UserLikePainting
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .forms import PaintingUploadForm
 from django.db.models import Q
+from django.conf import settings
 # from .forms import PaintingSearchForm
 
 
@@ -20,7 +22,7 @@ def painting_detail(request,pk):
 
 @login_required
 @user_passes_test(lambda u: u.is_staff)
-def upload_painting(request):
+def create_painting(request):
     if request.method == 'POST':
         form = PaintingUploadForm(request.POST,request.FILES)
         if form.is_valid():
@@ -29,6 +31,35 @@ def upload_painting(request):
     else:
         form = PaintingUploadForm()
     return render(request,'pages/upload.html',{'form':form})
+
+@login_required
+@user_passes_test(lambda u: u.is_staff)
+def update_painting(request, pk):
+    instance = get_object_or_404(Painting, id=pk)
+    if request.method == 'POST':
+        form = PaintingUploadForm(request.POST, request.FILES, instance=instance)
+        if form.is_valid():
+            image_path = os.path.join(settings.MEDIA_ROOT, instance.image.name)
+            # print (image_path)
+            if os.path.exists(image_path):
+                os.remove(image_path)
+            form.save()
+            return redirect('list')
+    else:
+        form = PaintingUploadForm(instance=instance)
+    return render(request,'pages/upload.html',{'form':form})
+
+@login_required
+@user_passes_test(lambda u: u.is_staff)
+def delete_painting(request, pk):
+    instance = get_object_or_404(Painting, id=pk)
+    if request.method == 'POST':
+        image_path = os.path.join(settings.MEDIA_ROOT, instance.image.name)
+        # print (image_path)
+        if os.path.exists(image_path):
+            os.remove(image_path)
+        instance.delete()
+    return redirect('list')
 
 @login_required
 def like_painting(request, pk):
