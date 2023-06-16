@@ -48,8 +48,10 @@
             <ul class="list-update-content">
             {% for painting in paintings %}
             <li>
-                <img src="{{painting.image.url}}" alt="{{ painting.image.name }}"/>
-                <a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a>
+                <a href="{% url 'detail' pk=painting.id %}">
+                    <img src="{{painting.image.url}}" alt="{{ painting.image.name }}"/>
+                    <p>{{ painting.name }}</p>
+                </a>
             </li>
             {% endfor %}
             </ul>

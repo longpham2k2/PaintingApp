@@ -4,7 +4,7 @@
 {% block content %}
 
 <main role="main" class="home">
-  <div class="modal-introduce" id="introduce">
+  <div class="modal-introduce" id="introduce"  onclick="closeModal()">
     <video width="320" height="240" autoplay muted class="video-introduce" id="videoIntroduce">
       <source src="{% get_media_prefix %}video-introduce.mp4"/>
     </video>

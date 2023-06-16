@@ -41,6 +41,11 @@
    width: 300px;
    height: 300px;
   object-fit: cover;
+  transition:  transform 0.3s ease;
+}
+
+.list-update-content li img:hover{
+   transform: translateY(-5px);
 }
 .btn-like{
     padding: 0;
