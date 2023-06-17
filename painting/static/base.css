@@ -1,5 +1,4 @@
 * {
-    font-family: Avenir-Nex, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,6 +8,13 @@
 :root {
     --height-menu: 80px;
     --width-menu: 300px;
+}
+@font-face {
+    font-family: "ThuPhap";
+    src: url(./fonts/hlbrush3.ttf);
+}
+body{
+    font-family: "ThuPhap";
 }
 
 button {
@@ -42,6 +48,7 @@ img {
 
 .header {
     margin-bottom: var(--height-menu);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-nav {
@@ -129,6 +136,7 @@ img {
 }
 
 .footer {
+    font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;

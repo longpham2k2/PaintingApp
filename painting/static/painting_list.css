@@ -87,7 +87,6 @@ a, a:hover {
 .home .home-featured-article .banner .overlay .banner-contents h2 {
     font-size: 70px;
     line-height: 60px;
-    font-family: foglihtenregular;
 }
 
 .home .home-featured-article .banner .overlay .text p {
@@ -107,7 +106,6 @@ a, a:hover {
 }
 
 .subtext {
-    font-family: Avenir-Nex, sans-serif;
     font-size: 13px;
     letter-spacing: 0;
     color: #989898;
@@ -120,7 +118,6 @@ a, a:hover {
     text-decoration: none;
     color: #3b3b3b;
     font-size: 18px;
-    font-family: cardobold;
 }
 
 .featured-list {
@@ -128,6 +125,7 @@ a, a:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding-bottom: 40px;
 }
 
 .featured-col {

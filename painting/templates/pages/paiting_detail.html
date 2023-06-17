@@ -25,15 +25,17 @@
             </div>
             <div style="display: flex; justify-content: center; align-items: center;">
                 <p style="margin: 0 16px;"> {{ painting.upload_date }}</p>
+                {% if user.is_authenticated %}
                 <a style="background-color: #4CAF50; border: none; color: white;
                 padding: 8px 16px; text-align: center; text-decoration: none;
-                display: inline-block; font-size: 16px;" href="{% url 'update' pk=painting.id %}"> Cập nhật </a>
+                display: inline-block; font-size: 16px; font-family: Arial, Helvetica, sans-serif;" href="{% url 'update' pk=painting.id %}"> Cập nhật </a>
                 <form action="{% url 'delete' pk=painting.id %}" method="post">
                     {% csrf_token %}
                     <button style="background-color: #ff0000; border: none; color: white;
                     padding: 8px 16px; text-align: center; text-decoration: none;
                     display: inline-block; font-size: 16px; margin: 0; line-height: 27px; border-radius: unset;" type="submit"> Xoá bỏ </button>
                 </form>
+                {% endif %}
             </div>
         </div>
     </div>
